@@ -11,12 +11,6 @@
           LED2闪烁。
 
 使用说明：
-+ EWARM
-          1. 打开project.eww文件
-          2. 编译所有文件：Project->Rebuild all
-          3. 载入工程镜像：Project->Debug
-          4. 运行程序：Debug->Go(F5)
-
 + MDK-ARM
           1. 打开project.uvproj文件
           2. 编译所有文件：Project->Rebuild all target files
