@@ -35,7 +35,6 @@
  ******************************************************************************/
 #define LED_GPIO_PORT CW_GPIOA
 #define LED_GPIO_PINS_LED2 GPIO_PIN_11
-#define LED_GPIO_PINS_LED1 GPIO_PIN_8
 
 /******************************************************************************
  * Global variable definitions (declared in header file with 'extern')
@@ -99,7 +98,6 @@ void freertos_demo()
 int32_t main(void)
 {
 	GPIO_InitTypeDef GPIO_InitStruct = {0};
-	GPIO_InitTypeDef GPIO_InitStruct_8 = {0};
 
 	SYSCTRL_HSI_Enable(SYSCTRL_HSIOSC_DIV12);
 
@@ -109,13 +107,8 @@ int32_t main(void)
 	GPIO_InitStruct.IT = GPIO_IT_NONE;
 	GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
 	GPIO_InitStruct.Pins = LED_GPIO_PINS_LED2;
-	
-	GPIO_InitStruct_8.IT = GPIO_IT_NONE;
-	GPIO_InitStruct_8.Mode = GPIO_MODE_OUTPUT_PP;
-	GPIO_InitStruct_8.Pins = LED_GPIO_PINS_LED1;
 
 	GPIO_Init(LED_GPIO_PORT, &GPIO_InitStruct);
-	GPIO_Init(LED_GPIO_PORT, &GPIO_InitStruct_8);
 
 	freertos_demo();
 }

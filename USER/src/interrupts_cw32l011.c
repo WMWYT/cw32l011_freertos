@@ -87,27 +87,6 @@ void HardFault_Handler(void)
     }
 }
 
-/**
-  * @brief This function handles System service call via SWI instruction.
-  */
-//void SVC_Handler(void)
-//{
-    /* USER CODE BEGIN SVCall_IRQn */
-
-    /* USER CODE END SVCall_IRQn */
-//}
-
-
-/**
-  * @brief This function handles Pendable request for system service.
-  */
-//void PendSV_Handler(void)
-//{
-    /* USER CODE BEGIN PendSV_IRQn */
-
-    /* USER CODE END PendSV_IRQn */
-//}
-
 /******************************************************************************/
 /* CW32 Peripheral Interrupt Handlers                                         */
 /* Add here the Interrupt Handlers for the used peripherals.                  */
